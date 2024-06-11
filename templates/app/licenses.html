@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- start work bg sec -->
+<div class="workbg-sec">
+  <div class="container-fluid p-0">
+    <img src="{% static 'images/home/licensesbg.png' %}" alt="image" itemprop="image" class="workbg-image" />
+  </div>
+</div>
+<!-- end work bg sec -->
+<!-- start licenses  -->
+<div class="licenses-sec py-4 bg-white">
+  <div class="container-fluid custom-container">
+    <div class="d-flex justify-content-start align-items-center " style="padding: 20px 0px;gap: 10px;">
+      <img src="{% static 'images/home/arrow.svg' %}" itemprop="image" alt="icon" style="width: 24px;height: 24px;" />
+      <h4 class="section-title" itemprop="title">
+        التراخيص
+      </h4>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-3 text-center">
+        <div class="text-center">
+          <img src="{% static 'images/home/licenses3.png' %}" alt="image" itemprop="image" class="licence-image" />
+          <p itemprop="description" class="license-des">
+            استشارات مالية
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-3 text-center">
+        <div class="text-center">
+          <img src="{% static 'images/home/licenses2.png' %}" alt="image" itemprop="image" class="licence-image" />
+          <p itemprop="description" class="license-des">
+            استشارات الحوكمة و المخاطر و الالتزام
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-3 text-center">
+        <div class="text-center">
+          <img src="{% static 'images/home/licenses1.png' %}" alt="image" itemprop="image" class="licence-image" />
+          <p itemprop="description" class="license-des">
+
+            استشارات ادارية
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end licenses  -->
+
+{% endblock content %}

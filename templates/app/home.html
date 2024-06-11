@@ -1,0 +1,600 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_title %}
+بيت الخبراء الموحد
+{% endblock head_title %}
+
+
+{% block content %}
+
+<!-- start hero -->
+<div class="hero-sec">
+  <div class="container">
+    <div class="hero-sec-content">
+      <h4 itemprop="title" class="hero-title">
+        لقد اجتمعنا في هذا البيت
+        من كل مكان
+      </h4>
+      <p itemprop="paragraph" class="hero-paragraph">
+        لنعطي من خبراتنا و معرفتنا كل من يريد معلومة
+        او يبحث عن متخصص في احدى المجالات ولديه
+        الخبرة من ارض الواقع في العديد من التخصصات
+        المالية و الادارية و الانشطة التجارية المختلفة.
+      </p>
+      <div class="d-flex" style="align-items: center; justify-content: flex-start;gap: 1rem;">
+        <a href="{% url 'about' %}" class="about-us-btn my-link">من نحن</a>
+        <a href="#contact-us" class="contact-us-btn my-link">تواصل معنا </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end hero -->
+<!-- start category sec -->
+<div class="category-sec">
+  <div class="conatiner">
+    <div class="d-flex align-items-center justify-content-center category-cards">
+      <div class="cate-card">
+        <p class="category-titles" itemprop="title">تعاون</p>
+        <p class="category-titles" itemprop="title">
+          Cooperation
+        </p>
+      </div>
+      <div class="cate-card">
+        <p class="category-titles" itemprop="title">استراتيجية</p>
+        <p class="category-titles" itemprop="title">
+          Strategy
+        </p>
+      </div>
+      <div class="cate-card">
+        <p class="category-titles" itemprop="title">ابتكار</p>
+        <p class="category-titles" itemprop="title">
+          Innovation
+        </p>
+      </div>
+      <div class="cate-card">
+        <p class="category-titles" itemprop="title">نجاح</p>
+        <p class="category-titles" itemprop="title">
+          Success
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end  category sec -->
+<!-- start executive sec -->
+<div class="executive-sec py-4 mt-4">
+  <div class="container-fluid custom-container">
+    <div class="d-flex justify-content-start align-items-center " style="padding: 20px 0px;gap: 10px;margin-top:3rem;">
+      <img src="{% static 'images/home/arrow.svg' %}" itemprop="image" alt="icon" style="width: 24px;height: 24px;" />
+      <h4 class="section-title" itemprop="title">
+        كلمة الرئيس التنفيذي
+      </h4>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 mb-3">
+        <div class="pt-4 ">
+          <p class="executive-sec-description" itemprop="paragraph">
+            ان مبدأ الاستشارة في حياتنا هو نهج صحيح يجب ان نضعه من اولوياتنا لنضمن بمشيئة الله الاستقرار
+            و الاستمرار و النجاح لاعمالنا و منشاتنا.
+          </p>
+          <p class="executive-sec-description " itemprop="paragraph">
+            و لان هذا المجال يكمن نجاحه في تحديد الاهداف بشكل صحيح فان الوصول الى تحقيق هذه الاهداف
+            يعتمد على اتباع خطوات صحيحة و واضحة و مجربة و بالتالي نصنع منهجية سلسة و مرنة تؤدي بنا
+            الى تحقيق المستهدفات.
+          </p>
+          <p class="executive-sec-description " itemprop="paragraph">
+            و بناءا عليه قمنا بتشييد”<span>بيت الخبراء الموحد</span>” ليجتمع قيه خبراءنا مع رواد الاعمال
+            و اصحاب المنشات
+            و نمكنهم من الوصول الى اهدافهم من خلال خبير متخصص في مجالهم من واقع خبراة عملية ناجحة.
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-3 ">
+        <img src="{% static 'images/home/executive.png' %}" alt="image" itemprop="image" class="executive-sec-image" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end executive sec -->
+<!-- start home-executive sec-->
+<div class="home-executive bg-white ">
+  <div class="container-fluid custom-container">
+    <div class="d-flex justify-content-start align-items-center " style="padding: 20px 0px;gap: 10px;margin-top:1rem;">
+      <img src="{% static 'images/home/arrow.svg' %}" itemprop="image" alt="icon" style="width: 24px;height: 24px;" />
+      <h4 class="section-title" itemprop="title">
+        في بيتنا خبير
+      </h4>
+    </div>
+    <div class="row py-4 mb-2">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-3">
+        <div>
+          <div class="card">
+            <img src="{% static 'images/home/home1.png' %}" class="card-img-top" alt="image" itemprop="image">
+            <div class="card-body">
+              <h5 class="card-title">التأسيس</h5>
+              <p class="card-text">
+                من خلال خبراتنا كمؤسسين لبيت الخبراء اصبح
+                لدينا الكثير من الاصدقاء و الزملاء و المعارف في
+                جميع المجالات و بالتالي مهما كان مشروعك او
+                هدفك سنبحث لك في بيتنا ما يلبي احتياجاتك او
+                قد نستضيف لمشروعك خصيصا من يدعم طلبك
+                و يلبي رغبتك.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-3">
+        <div>
+          <div class="card">
+            <img src="{% static 'images/home/home2.png' %}" class="card-img-top" alt="image" itemprop="image">
+            <div class="card-body">
+              <h5 class="card-title">الاهداف</h5>
+              <p class="card-text">
+                نحن نمنح خبراءنا الفرصة ليمارسوا شغفهم من
+                خلال المشاركة بخبراتهم ونمنح عملاءنا الجودة
+                و سرعة التنفيذ والنتيجة التي تحقق طموحاتهم
+                و اهدافهم دون تعقيدات و مقدمات.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-3">
+        <div>
+          <div class="card">
+            <img src="{% static 'images/home/home3.png' %}" class="card-img-top" alt="image" itemprop="image">
+            <div class="card-body">
+              <h5 class="card-title">رؤيتنا</h5>
+              <p class="card-text">
+                هي المساهمة في صناعة مؤسسات وطنية تعمل
+                بمفهوم الاستدامة و الاستمرارية ,تساهم بشكل مباشر
+                في دعم ركائز الاقتصاد الوطني,من خلال تطبيق معايير
+                العمل المؤسسي و اعادة الهيكلية و وضع قواعد متينة
+                و بنية تحتية صلبة وذلك بتطبيق مجموعة من الخدمات
+                و البرامج التي تجعل المنشأة لديها بيئة عمل جيدة
+                و احترافية و خطة استراتيجية وهدف واحد و هو
+                “<span>الحوكمة و الاستدامة</span> “
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end home-executive sec-->
+<!-- start Experience -->
+<div class="Experience-sec py-4">
+  <div class="container-fluid custom-container">
+    <div class="pt-3">
+      <h4 class="Experience-sec-title" itemprop="title">
+        الخبرات
+      </h4>
+      <p class="Experience-sec-paragraph" itemprop="paragraph">
+        لقد عمل خبراءنا في مجالات مختلفة و قطاعات ريادية و سنستعرض هنا جهات
+        العمل التي انضم اليها خبراءنا خلال مسيرتهم المهنية
+      </p>
+    </div>
+    <div class="mySwiper pt-lg-4 my-4 swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="{% static 'images/Experience/Asset 94.png' %}" itemprop="image" alt="flutter"
+            class="languahe-opacity-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'images/Experience/Asset 100.png' %}" itemprop="image" alt="aws" class="languahe-opacity-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'images/Experience/Asset 99.png' %}" itemprop="image" alt="mysql"
+            class="languahe-opacity-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'images/Experience/Asset 97.png' %}" itemprop="image" alt="dot net"
+            class="languahe-opacity-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'images/Experience/Asset 96.png' %}" itemprop="image" alt="vue"
+            class="languahe-opacity-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'images/Experience/Asset 102.png' %}" itemprop="image" alt="flutter"
+            class="languahe-opacity-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'images/Experience/Asset 104.png' %}" itemprop="image" alt="aws"
+            class="languahe-opacity-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'images/Experience/Asset 89.png' %}" itemprop="image" alt="angular"
+            class="languahe-opacity-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'images/Experience/Asset 76.png' %}" itemprop="image" alt="dot net"
+            class="languahe-opacity-icon" />
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <!--   <div class="swiper-pagination"></div> -->
+
+      <!-- If we need navigation buttons -->
+      <!--   <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
+    </div>
+    <div class="text-center py-4">
+      <a href="{% url 'experience' %}" class="see-more-btn my-link">
+        مشاهدة المزيد
+      </a>
+    </div>
+  </div>
+</div>
+<!-- end Experience -->
+<!-- start services -->
+<div class="services-sec py-4">
+  <div class="container-fluid custom-container">
+    <div class="d-flex justify-content-start align-items-center " style="padding: 20px 0px;gap: 10px;">
+      <img src="{% static 'images/home/arrow.svg' %}" itemprop="image" alt="icon" style="width: 24px;height: 24px;" />
+      <h4 class="section-title" itemprop="title">
+        خدماتنا
+      </h4>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 my-3" style="text-align: start;">
+        <img src="{% static 'images/home/services1.png' %}" alt="image" itemprop="image" class="services-sec-image" />
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 my-3">
+        <h5 class="services-sec-title" itemprop="title">
+          صناعة قصص النجاح
+        </h5>
+        <p class="services-sec-description" itemprop="paragraph">
+          عندما تصادفك عقبة او لديك فكرة و ربما تطمح لتطير معين في قطاع ما او على مستوى المنشأة
+          فان<span>
+            بيت الخبراء
+          </span> يفتح ابوابه لأي تطوير او تغيير و يأخذ معك رحلة التغيير من البداية.
+        </p>
+        <p class="services-sec-description" itemprop="paragraph">
+          ان كل عميل لبيت الخبراء الموحد هو ضيف يأخذ حقه بالكامل من الانصات و المناقشة حتى تتكون
+          الفكرة بالكامل.
+        </p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 my-3">
+        <h5 class="services-sec-title" itemprop="title">
+          تحقيق الاستدامة
+        </h5>
+        <p class="services-sec-description" itemprop="paragraph">
+          و لأن نكون بيت كل منشأة ترغب في اعادة ترتيب اوراقها و تتجه نحو عمل مؤسسي منظم من خلال تطبيق
+          معايير الجودة و الحوكمة و التطوير الذي يتناسب مع التطلعات الوطنية و الدولية و التي تنقل المنشأت
+          بمختلف
+          تصنيفها سواءا الناشئة او المنشأت المتوسطة و الصغيرة لمستوى <span>أكثر استقرارا و ثباتا</span>.
+        </p>
+
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 my-3" style="text-align: start;">
+        <img src="{% static 'images/home/services2.png' %}" alt="image" itemprop="image" class="services-sec-image" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end services -->
+<!-- start Specialties sec -->
+<div class="Specialties-sec py-4">
+  <div class="container-fluid custom-container">
+    <h4 class="Specialties-sec-title pt-4" itemprop="title">
+      التخصصات
+    </h4>
+    <div class="row" style="    margin: 4rem 0px;">
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-3 text-center">
+        <div>
+          <img src="{% static 'images/Specialties/Asset 380.png' %}" alt="image" title="image" />
+          <p class="Specialties-sec-des" itemprop="paragraph">
+            تطوير المنتجات
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-3 text-center">
+        <div>
+          <img src="{% static 'images/Specialties/Asset 390.png' %}" alt="image" title="image" />
+          <p class="Specialties-sec-des" itemprop="paragraph">
+            تطوير الاعمال
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-3 text-center">
+        <div>
+          <img src="{% static 'images/Specialties/Asset 379.png' %}" alt="image" title="image" />
+          <p class="Specialties-sec-des" itemprop="paragraph">
+            التطوير العقاري
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-3 text-center">
+        <div>
+          <img src="{% static 'images/Specialties/Asset 389.png' %}" alt="image" title="image" />
+          <p class="Specialties-sec-des" itemprop="paragraph">
+            المساهمات العقارية
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-3 text-center">
+        <div>
+          <img src="{% static 'images/Specialties/Asset 378.png' %}" alt="image" title="image" />
+          <p class="Specialties-sec-des" itemprop="paragraph">
+            ادارة الاملاك العقارية
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-3 text-center">
+        <div>
+          <img src="{% static 'images/Specialties/Asset 388.png' %}" alt="image" title="image" />
+          <p class="Specialties-sec-des" itemprop="paragraph">
+            التمويل و الصكوك الاسلامية
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-3 text-center">
+        <div>
+          <img src="{% static 'images/Specialties/Asset 386.png' %}" alt="image" title="image" />
+          <p class="Specialties-sec-des" itemprop="paragraph">
+            الالتزام و ادارة المخاطر
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-3 text-center">
+        <div>
+          <img src="{% static 'images/Specialties/Asset 377.png' %}" alt="image" title="image" />
+          <p class="Specialties-sec-des" itemprop="paragraph">
+            الدراسات المالية
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center py-4">
+      <a href="{% url 'services' %}" class="see-more-btn my-link">
+        مشاهدة المزيد
+      </a>
+    </div>
+  </div>
+</div>
+<!-- end Specialties sec -->
+<!-- start work -->
+<div class="work-sec py-4 bg-white">
+  <div class="container-fluid custom-container">
+    <div class="d-flex justify-content-start align-items-center " style="padding: 20px 0px;gap: 10px;">
+      <img src="{% static 'images/home/arrow.svg' %}" itemprop="image" alt="icon" style="width: 24px;height: 24px;" />
+      <h4 class="section-title" itemprop="title">
+        ألية العمل
+      </h4>
+    </div>
+    <div class="row ">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 my-3">
+
+        <p class="services-sec-description" itemprop="paragraph">
+          سوف نستضيفك لنتعرف على بعضنا بشكل افضل و لنسمع منك ما يدور في راسك من طموحات,
+          و بناءا عليه سنقول لك ما نفكر فيه لنحقق هذه الطموحات وما هي افضل الممارسات.
+        </p>
+        <div class="row work-row">
+          <div class="col-6">
+            <ul>
+              <li>
+                <p>
+                  الية تنفيذ الفكرة
+                </p>
+              </li>
+              <li>
+                <p>
+                  مدة التنفيذ و التكلفة
+                </p>
+              </li>
+              <li>
+                <p>
+                  ثم نطلب تحديد موعد ليشرح لك الخبير ما سيقوم به بشكل مفصل
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>
+                <p>
+                  الخبير او الفريق المناسب لهذه المهمة
+                </p>
+              </li>
+              <li>
+                <p>
+                  ماهي الخبرات التي تناسب مشروعك
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-3 text-center">
+        <img src="{% static 'images/home/work.png' %}" itemprop="image" alt="image" class="work-image w-100" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end work -->
+<!-- start supervisor -->
+<div class="supervisor-sec py-4">
+  <div class="container-fluid custom-container">
+    <div class="d-flex justify-content-start align-items-center " style="padding: 20px 0px;gap: 10px;">
+      <img src="{% static 'images/home/arrow.svg' %}" itemprop="image" alt="icon" style="width: 24px;height: 24px;" />
+      <h4 class="section-title" itemprop="title">
+        ابرز عملاءنا
+      </h4>
+    </div>
+    <div class="slide-container swiper">
+      <div class="slide-content">
+        <div class="card-wrapper swiper-wrapper" style="height: fit-content;">
+          <div class="card swiper-slide">
+            <div class="image-contents text-center">
+              <div>
+                <img src="{% static 'images/Experience/Asset 107.png' %}" alt="image" itemprop="image"
+                  class="image-supervisor" />
+                <p class="slide-des" itemprop="description">
+                  امداد لتموين الطعام
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-contents text-center">
+              <div>
+                <img src="{% static 'images/Experience/Asset 89.png' %}" alt="image" itemprop="image"
+                  class="image-supervisor" />
+                <p class="slide-des" itemprop="description">
+                  امكان العربية
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-contents text-center">
+              <div>
+                <img src="{% static 'images/Experience/Asset 108.png' %}" alt="image" itemprop="image"
+                  class="image-supervisor" />
+                <p class="slide-des" itemprop="description">
+                  بناء الاعمال الوطنية
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-contents text-center">
+              <div>
+                <img src="{% static 'images/Experience/Asset 109.png' %}" alt="image" itemprop="image"
+                  class="image-supervisor" />
+                <p class="slide-des" itemprop="description">
+                  قرضي الرقمية
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-contents text-center">
+              <div>
+                <img src="{% static 'images/Experience/Asset 89.png' %}" alt="image" itemprop="image"
+                  class="image-supervisor" />
+                <p class="slide-des" itemprop="description">
+                  امكان العربية
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-contents text-center">
+              <div>
+                <img src="{% static 'images/Experience/Asset 89.png' %}" alt="image" itemprop="image"
+                  class="image-supervisor" />
+                <p class="slide-des" itemprop="description">
+                  امكان العربية
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-next swiper-navBtn"></div>
+      <div class="swiper-button-prev swiper-navBtn"></div>
+    </div>
+
+  </div>
+</div>
+<!-- end supervisor  -->
+<!-- start  features sec -->
+<div class="features-sec">
+  <div class="container-fluid p-0">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'images/home/features.png' %}" class="d-block w-100" alt="image">
+          <div class="carousel-caption  d-md-block">
+            <h5 class="slider-features-title" itemprop="title">
+              بماذا نتميز ...؟
+            </h5>
+            <p class="slider-features-des" itemprop="description">
+              ان الانفراد الذي اضفناه في بيت الخبراء الموحد هي خدمة الاشراف الاستشاري لقد وضعنا انفسنا
+              في صفك, و تابعنا العمل من مكانك لنتأكد من جودة الدراسات المقدمة لك, نناقشها نيابة عنك
+              و نراجعها و نتأكد من دقتها و ماذا ينقصها لتكن واقعية و هل يمكن تطبيقها فعليا.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'images/home/features.png' %}" class="d-block w-100" alt="image">
+          <div class="carousel-caption  d-md-block">
+            <h5 class="slider-features-title" itemprop="title">
+              بماذا نتميز ...؟
+            </h5>
+            <p class="slider-features-des" itemprop="description">
+              ان الانفراد الذي اضفناه في بيت الخبراء الموحد هي خدمة الاشراف الاستشاري لقد وضعنا انفسنا
+              في صفك, و تابعنا العمل من مكانك لنتأكد من جودة الدراسات المقدمة لك, نناقشها نيابة عنك
+              و نراجعها و نتأكد من دقتها و ماذا ينقصها لتكن واقعية و هل يمكن تطبيقها فعليا.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end  features sec -->
+<!-- start contact us -->
+<div class="contact-us-sec bg-white py-3" id="contact-us">
+  <div class="container-fluid custom-container">
+    <div class="d-flex justify-content-start align-items-center " style="padding: 20px 0px;gap: 10px;">
+      <img src="{% static 'images/home/arrow.svg' %}" itemprop="image" alt="icon" style="width: 24px;height: 24px;" />
+      <h4 class="section-title" itemprop="title">
+        نحن معك دائما
+      </h4>
+    </div>
+    <div class="row"
+      style="border: 1px solid rgb(244, 255, 251);box-shadow: rgba(11, 114, 76, 0.47) 0px 0px 9px;border-radius: 10px; background: white; margin: 1rem auto;">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-3 py-4 text-center">
+        <h5 itemprop="title-contact" class="contact-title-sec">
+          طلب استشارة
+        </h5>
+        <p itemprop="des-contact" class="des-title-sec">
+          شكراً على اهتمامك بـ"<span>بيت الخبراء الموحد</span>"! تواصل معنا
+          وشاركنا أسئلتك واقتراحاتك وأفكارك، فتواصلك يسرّنا دوماً
+        </p>
+        <div class="form-sec pt-4">
+          <div class="row">
+            <div class="col-6">
+              <input type="text" class="input-contact form-control" placeholder="الاسم الاول" />
+            </div>
+            <div class="col-6">
+              <input type="text" class="input-contact form-control" placeholder="الاسم الاخير" />
+            </div>
+          </div>
+          <div>
+            <input type="email" placeholder="البريد الالكتروني" class="input-contact form-control"
+              style="margin-bottom: 17px !important;" />
+            <input type="text" placeholder=" رقم الهاتف" class="input-contact form-control"
+              style="margin-bottom: 17px !important;" />
+            <textarea type="email" placeholder=" تفاصيل الاستشارة" class="textarea-contact form-control"
+              style="margin-bottom: 17px !important;"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="submit-btn">ارسال</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p-0">
+        <img src="{% static 'images/home/contact.png' %}" alt="image" itemprop="image" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end contact us -->
+
+.
+{% endblock content %}

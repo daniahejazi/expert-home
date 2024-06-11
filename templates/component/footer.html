@@ -1,0 +1,70 @@
+{% load static %}
+<footer>
+  <div class="footer-sec pt-4">
+    <div class="container-fluid custom-container pt-4 mt-3">
+      <div class="row pt-4">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-3" style="text-align:start;">
+          <img src="{% static 'images/home/footerlogo.png' %}" itemprop="image" class="main-logo-footer" alt="image" />
+          <p itemprop="description" class="des-footer">
+            بيت الخبراء يفتح ابوابه لأي تطوير او تغيير و يأخذ معك
+            رحلة التغيير من البداية.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 mb-3">
+          <div class="d-flex flex-wrap justify-content-start align-items-start" style="gap: 2rem;">
+            <div>
+              <h5 class="sec-title-footer" itemprop="title">
+                روابط تهمك
+              </h5>
+              <ul class="ul-footer">
+                <li>
+                  <a href="{% url 'about' %}" class="footer-link">
+                    من نحن
+                  </a>
+                </li>
+                <li>
+                  <a href="{% url 'experience' %}" class="footer-link">
+                    الخبرات
+                  </a>
+                </li>
+                <li>
+                  <a href="{% url 'services' %}" class="footer-link">
+                    خدماتنا
+                  </a>
+                </li>
+                <li>
+                  <a href="{% url 'action_aechanism' %}" class="footer-link">
+                    الية العمل
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5 class="sec-title-footer" itemprop="title">
+                نحن معك دائما
+              </h5>
+              <ul class="ul-footer">
+                <li>
+                  <a href="{% url 'consultation_request' %}" class="footer-link">
+                    طلب استشارة
+                  </a>
+                </li>
+                <li>
+                  <a href="{% url 'join_as_officer' %}" class="footer-link">
+                    انضم كخبير
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="copy-right-sec py-3 text-center">
+        <p class="copyright-des" itemprop="description">
+          حقوق النشر © 2024 بيت الخبراء الموحد. كل الحقوق محفوظة.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

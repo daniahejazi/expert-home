@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<!-- start work bg sec -->
+<div class="workbg-sec">
+  <div class="container-fluid p-0">
+    <img src="{% static 'images/home/requestbg1.jpg' %}" alt="image" itemprop="image" class="workbg-image" />
+  </div>
+</div>
+<!-- end work bg sec -->
+<!-- start services -->
+<div class="services-sec py-4">
+  <div class="container-fluid custom-container">
+    <div class="d-flex justify-content-start align-items-center " style="padding: 20px 0px;gap: 10px;">
+      <img src="{% static 'images/home/arrow.svg' %}" itemprop="image" alt="icon" style="width: 24px;height: 24px;" />
+      <h4 class="section-title" itemprop="title">
+        الية العمل
+      </h4>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 my-3" style="text-align: start;">
+        <img src="{% static 'images/home/work1.png' %}" alt="image" itemprop="image" class="services-sec-image" />
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 my-3">
+        <h5 class="services-sec-title" itemprop="title">
+          سوف نستضيفك
+        </h5>
+        <p class="services-sec-description" itemprop="paragraph">
+          لنتعرف على بعض بشكل افضل و لنسمع منك ما يدور في رأسك من طموحات, و بناءا عليه
+          سنقول لك ما نفكر فيه لنحقق هذه الطموحات وماهي افضل الممارسات.
+        </p>
+
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 my-3">
+        <div class="row work-row">
+          <div class="col-6">
+            <ul style="text-align: start;">
+              <li style="padding: 10px 0px;">
+                <p>
+                  الية تنفيذ الفكرة
+                </p>
+              </li>
+              <li style="padding: 10px 0px;">
+                <p>
+                  مدة التنفيذ و التكلفة
+                </p>
+              </li>
+              <li style="padding: 10px 0px;">
+                <p>
+                  ثم نطلب تحديد موعد ليشرح لك الخبير ما سيقوم به بشكل مفصل
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul style="text-align: start;">
+              <li style="padding: 10px 0px;">
+                <p>
+                  الخبير او الفريق المناسب لهذه المهمة
+                </p>
+              </li>
+              <li style="padding: 10px 0px;">
+                <p>
+                  ماهي الخبرات التي تناسب مشروعك
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 my-3" style="text-align: start;">
+        <img src="{% static 'images/home/work2.png' %}" alt="image" itemprop="image" class="services-sec-image" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end services -->
+{% endblock content %}
