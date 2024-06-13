@@ -120,7 +120,16 @@ header .dropdown-item {
   background-repeat: no-repeat;
   background-size: cover;
   /* height: 100%;*/
+  
 }
+
+@media (min-width: 979px) {
+  .hero-sec {
+
+    height: 40rem !important;
+  }
+}
+
 .hero-sec .hero-title {
   color: white;
   font-size: 30px;
@@ -1091,5 +1100,10 @@ swiper-slide {
   border-radius: 20px !important;
 }
 
+/* .hero-sec {
+  height: 58rem !important;
+} */
 
-
+.my-category {
+  position: relative;
+}
