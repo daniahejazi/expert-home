@@ -6,6 +6,18 @@
 {% block content %}
 <!-- start work bg sec -->
 <div class="workbg-sec">
+  {% if messages %}
+  <div class="custom-alert">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show custom-alert-content" role="alert">
+      <p>{{ message }}</p>
+      <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
   <div class="container-fluid p-0">
     <img src="{% static 'images/home/join.png' %}" alt="image" itemprop="image" class="workbg-image" />
   </div>
@@ -20,32 +32,39 @@
         انضم كخبير
       </h4>
     </div>
-    <div class="form-sec">
+
+
+
+
+    <form method="post" enctype="multipart/form-data" action="{% url 'join_as_expert_form' %}" class="form-sec">
+      {% csrf_token %}
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-3" style="text-align: start;">
           <label class="label-form-sec">
             اسم الخبير بالكامل
           </label>
-          <input type="text" class="input-join form-control" placeholder=" " />
+          <input required type="text" name="name" class="input-join form-control" placeholder=" " />
         </div>
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-3" style="text-align: start;">
           <label class="label-form-sec">
             التخصص العام
           </label>
-          <input type="text" class="input-join form-control" placeholder=" " />
+          <input required type="text" name="general_specialization" class="input-join form-control" placeholder=" " />
         </div>
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-3" style="text-align: start;">
           <label class="label-form-sec">
             مجموع سنوات الخبرة العملية
           </label>
-          <input type="text" class="input-join form-control" placeholder=" " />
+          <input required type="text" name="sum_experience_years" class="input-join form-control" placeholder=" " />
         </div>
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 mb-3" style="text-align: start;">
           <label class="label-form-sec">
             تخصص دقيق
           </label>
-          <textarea type="text" class="textarea-join form-control" placeholder=" "></textarea>
+          <textarea required type="text" name="details_specialization_info" class="textarea-join form-control"
+            placeholder=" "></textarea>
         </div>
+
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mb-3" style="text-align: start;">
           <div>
             <label class="label-form-sec">
@@ -53,48 +72,53 @@
             </label>
             <div class="d-flex justify-content-start align-content-start">
               <div class="radio-item">
-                <input type="radio" id="ritema" name="ritem" value="ropt1">
+                <input type="radio" id="ritema" required name="display_name_type" value="YES">
                 <label for="ritema">نعم</label>
               </div>
               <div class="radio-item">
-                <input type="radio" id="ritemb" name="ritem" value="ropt2">
+                <input type="radio" id="ritemb" required name="display_name_type" value="NO">
                 <label for="ritemb">لا</label>
               </div>
             </div>
           </div>
 
         </div>
+
+
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-3" style="text-align: start;">
           <label class="label-form-sec">
             الخدمات التي يمكن تقديمها و الاستشارات التي يمكن الدعم فيها
             بشكل مفصل” <span>عربي- انكليزي</span>”
 
           </label>
-          <textarea type="text" class="textarea-join form-control" placeholder=" "></textarea>
+          <textarea type="text" name="services" class="textarea-join form-control" placeholder=" " required></textarea>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-3" style="text-align: start;">
           <label class="label-form-sec">
             الجهات التي عملتم معها”<span>ارجو اضافة الموقع الالكتروني لكل جهة</span>”
           </label>
-          <textarea type="text" class="textarea-join form-control" placeholder=" "></textarea>
+          <textarea type="text" name="work_experiense_comapnies" class="textarea-join form-control" placeholder=" "
+            required></textarea>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-3" style="text-align: start;">
           <label class="label-form-sec">
             الجهات التي حصلتم منها على شهادة اكاديمية ”<span> ارجو اضافة الموقع الالكتروني لكل مؤسسة تعليمية </span>”
           </label>
-          <textarea type="text" class="textarea-join form-control" placeholder=" "></textarea>
+          <textarea type="text" name="study_qualifications" class="textarea-join form-control" placeholder=" "
+            required></textarea>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-3" style="text-align: start;">
           <label class="label-form-sec mb-4">
             الجهات التي لديكم فيها عضوية مجلس ادارة او استشارة او تعاون
           </label>
-          <textarea type="text" class="textarea-join form-control mt-3" placeholder=" "></textarea>
+          <textarea type="text" name="heigh_special_companies" class="textarea-join form-control mt-3" placeholder=" "
+            required></textarea>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-3" style="text-align: start;">
           <label class="label-form-sec">
             ارجو اضافة اي اقتراحات او تفاصيل او معلومات هامة
           </label>
-          <textarea type="text" class="textarea-join form-control" placeholder=" "></textarea>
+          <textarea type="text" name="extraInfo" class="textarea-join form-control" placeholder=" "></textarea>
         </div>
       </div>
       <div>
@@ -102,7 +126,7 @@
           الرخص المهنية
         </h5>
         <div>
-          <div class="license-section-upload my-3">
+          <!-- <div class="license-section-upload my-3">
             <div class="d-flex justify-content-start align-content-center" style="gap: 10px;">
               <img src="{% static 'images/home/pdf.png' %}" class="pdf-icon" alt="icon" itemprop="image" />
               <p class="pdf-title" itemprop="des">
@@ -120,9 +144,9 @@
                 <img src="{% static 'images/home/plus.png' %}" style="width: 30px;height: 30px;" itemprop="image" alt="image" />
               </label>
             </div>
-          </div>
-          <div class="license-section-upload my-3">
-            <div class="d-flex justify-content-start align-content-center" style="gap: 10px;">
+          </div> -->
+          <div class="license-section-upload my-3 file-upload-box">
+            <!-- <div class="d-flex justify-content-start align-content-center" style="gap: 10px;">
               <img src="{% static 'images/home/pdf.png' %}" class="pdf-icon" alt="icon" itemprop="image" />
               <p class="pdf-title" itemprop="des">
                 شهادة مزاولة مهنة
@@ -150,16 +174,29 @@
                 </div>
               </div>
 
+            </div> -->
+            <input type="file" multiple name="attachments" class=" inputfile" name="" id="" required>
+            <div class="images-box">
+              <img src="https://placehold.co/80x80" alt="">
+              <img src="https://placehold.co/80x80" alt="">
+              <img src="https://placehold.co/80x80" alt="">
             </div>
           </div>
         </div>
       </div>
+
+
       <div class="py-4 text-center">
-        <button type="button" class="send-button">
+        <button type="submit" class="send-button">
           ارسال
         </button>
       </div>
-    </div>
+
+
+    </form>
+
+
+
   </div>
 </div>
 <!-- end join -->
@@ -190,9 +227,26 @@
 
 {% block script %}
 <script>
+  $(document).ready(function () {
+    setTimeout(function () {
+      $(".alert").alert('close');
+    }, 3000); // 3 seconds
+  });
+
+
   document.getElementById('pickup-1').addEventListener('change', function () {
     document.querySelector('label[for="pickup-1"]').classList.add('colorText')
   })
+
+  document.getElementById('file-input').addEventListener('change', function () {
+    var fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+    document.getElementById('file-name').textContent = fileName;
+  });
+
+
+
+
+
 </script>
 
 {% endblock script %}

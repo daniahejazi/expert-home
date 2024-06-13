@@ -1,5 +1,5 @@
 {% load static %}
-{% load bootstrap5 %}
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -28,19 +28,25 @@
   <meta property="og:type" content="" />
   <title>{% block head_title %}{% endblock head_title %}</title>
   <link rel="icon" type="image/x-icon" href="{% static 'images/min-logo.png' %}" />
+
+  <!-- normalize -->
+  <!-- <link rel="stylesheet" href="{% static 'css/normalize.css' %}"> -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}" />
 
+  
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
-
-  <link href="{% static 'css/stylesRTL.css' %}" rel="stylesheet" />
+  
   <link href="{% static 'css/swiper-bundle.css' %}" rel="stylesheet" />
   <!-- Swiper slider CSS -->
   <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
-
+  
+  <link href="{% static 'css/stylesRTL.css' %}" rel="stylesheet" />
   <style>
     html {
       scroll-behavior: smooth;
@@ -60,6 +66,8 @@
   {% include 'component/social_icons.html' %}
   {% block content %}
 
+
+
   {% endblock content %}
 
   <!-- start footer -->
@@ -72,8 +80,9 @@
   <script src="{% static 'js/swiperslider-bundle.min.js' %}"></script>
   <script src="{% static 'js/header.js' %}"></script>
 
+
   {% block script %}
-  
+    
   {% endblock script %}
 </body>
 

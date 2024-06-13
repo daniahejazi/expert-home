@@ -15,11 +15,11 @@ class CerificateInline(admin.TabularInline):
 
 @admin.register(Expert)
 class ExpertAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'specialization')
-    search_fields = ('name', 'specialization')
-    list_filter = ('specialization',)
+    list_display = ('created_at','name', 'general_specialization', "sum_experience_years")
+    search_fields = ('name', 'general_specialization')
+    list_filter = ('general_specialization', 'sum_experience_years')
     list_per_page = 2
-    ordering = ('-yearsExperiance',)
+    ordering = ('-created_at',)
     
     inlines = [CerificateInline]
 

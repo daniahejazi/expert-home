@@ -10,6 +10,18 @@
 
 <!-- start hero -->
 <div class="hero-sec">
+  {% if messages %}
+  <div class="custom-alert">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show custom-alert-content" role="alert">
+      <p>{{ message }}</p>
+      <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
   <div class="container">
     <div class="hero-sec-content">
       <h4 itemprop="title" class="hero-title">
@@ -566,27 +578,29 @@
           شكراً على اهتمامك بـ"<span>بيت الخبراء الموحد</span>"! تواصل معنا
           وشاركنا أسئلتك واقتراحاتك وأفكارك، فتواصلك يسرّنا دوماً
         </p>
-        <div class="form-sec pt-4">
+        <form method="post" action="{% url 'home_consultation_form' %}" class="form-sec pt-4">
+          {% csrf_token %}
           <div class="row">
             <div class="col-6">
-              <input type="text" class="input-contact form-control" placeholder="الاسم الاول" />
+              <input type="text" name="first_name" required class="input-contact form-control" placeholder="الاسم الاول" />
             </div>
             <div class="col-6">
-              <input type="text" class="input-contact form-control" placeholder="الاسم الاخير" />
+              <input type="text" name="last_name" required class="input-contact form-control" placeholder="الاسم الاخير" />
             </div>
           </div>
           <div>
-            <input type="email" placeholder="البريد الالكتروني" class="input-contact form-control"
+            <input type="email" name="email" required placeholder="البريد الالكتروني" class="input-contact form-control"
               style="margin-bottom: 17px !important;" />
-            <input type="text" placeholder=" رقم الهاتف" class="input-contact form-control"
+            <input type="text" name="phone" required placeholder=" رقم الهاتف" class="input-contact form-control"
               style="margin-bottom: 17px !important;" />
-            <textarea type="email" placeholder=" تفاصيل الاستشارة" class="textarea-contact form-control"
+            <textarea type="email" name="message" required placeholder=" تفاصيل الاستشارة" class="textarea-contact form-control"
               style="margin-bottom: 17px !important;"></textarea>
           </div>
+          <input type="hidden" name="next" value="{{ next }}">
           <div class="text-center">
             <button type="submit" class="submit-btn">ارسال</button>
           </div>
-        </div>
+        </form>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p-0">
         <img src="{% static 'images/home/contact.png' %}" alt="image" itemprop="image" />
@@ -596,5 +610,16 @@
 </div>
 <!-- end contact us -->
 
-.
+
 {% endblock content %}
+
+
+{% block script %}
+  <script>
+    $(document).ready(function () {
+      setTimeout(function () {
+        $(".alert").alert('close');
+      }, 3000); // 3 seconds
+    });
+  </script>
+{% endblock script %}
