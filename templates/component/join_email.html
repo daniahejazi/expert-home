@@ -1,0 +1,62 @@
+<!-- templates/custom_email.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email</title>
+    <style>
+        body {
+            direction: rtl;
+            font-family: Arial, sans-serif;
+            text-align: right;
+            color: black;
+        }
+        .email-container {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .header {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: black;
+        }
+        .content {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .content p {
+            text-align: right;
+            color: black;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1> طلب انضمام كخبير من السيد : {{name}}</h1>
+        </div>
+        <div class="content">
+            <p> <strong>الاسم</strong> : {{ name }}</p>
+            <p> <strong> التخصص العام</strong> : {{ general_specialization }} </p>
+            <p>{{ sum_experience_years }} : <strong>مجموع سنوات الخبرة العملية</strong></p>
+            <hr>
+            <p> <a href="{{admin_page_url}}">{{admin_page_url}}</a>  :يمكنك زيارة لوحة التحكم عن طريق ذلك الرابط </p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 UHX. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

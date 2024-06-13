@@ -7,8 +7,8 @@ def handle_upload_files(instance, filename):
 
 class Expert(models.Model):
     DISPLAY_NAME_CHOISES = (
-        ("YES", "Yes"),
-        ("NO", "No")
+        ("YES", "نعم"),
+        ("NO", "لا")
     )
     name = models.CharField(verbose_name="الاسم", max_length=255)
     # email = models.EmailField(verbose_name="البريد الالكتروني")
@@ -16,7 +16,7 @@ class Expert(models.Model):
     general_specialization = models.CharField(verbose_name="التخصص العام",max_length=255)
     sum_experience_years = models.SmallIntegerField(verbose_name="مجموع سنوات الخبرة العملية",default=0)
     details_specialization_info = models.TextField(verbose_name="تخصص دقيق")
-    display_name_type = models.CharField(verbose_name="هل ترغب بعرض اسمك و صورتك",max_length=3, choices=DISPLAY_NAME_CHOISES, default="YES")
+    display_name_type = models.CharField(verbose_name="هل ترغب بعرض اسمك و صورتك",max_length=3, choices=DISPLAY_NAME_CHOISES, default="نعم")
     services = models.TextField(verbose_name="الخدمات التي يمكن تقديمها و الاستشارات")
     work_experiense_comapnies = models.TextField(verbose_name="الجهات التي عملتم معها")
     study_qualifications = models.TextField(verbose_name="الجهات التي حصلتم منها على شهادة اكاديمية")
@@ -49,7 +49,7 @@ class Vocation(models.Model):
     created_at = models.DateTimeField(verbose_name="تاريخ الارسال", auto_now_add=True)
     
     def __str__(self) -> str:
-        return self.name
+        return f"{self.first_name} {self.last_name}"
     
     class Meta:
         verbose_name_plural = "طلبات الاستشارة"
