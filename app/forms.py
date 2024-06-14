@@ -13,8 +13,8 @@ class ExpertForm(forms.ModelForm):
         model = Expert
         fields = (
             "name",
-            # "email",
-            # "phone",
+            "email",
+            "phone",
             "general_specialization",
             "sum_experience_years",
             "details_specialization_info",
@@ -25,7 +25,7 @@ class ExpertForm(forms.ModelForm):
             "heigh_special_companies",
             "extraInfo"
         )
-        
+
 
 
 
