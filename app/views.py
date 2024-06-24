@@ -46,7 +46,6 @@ def join_as_expert_view(request):
 def join_as_expert_form_view(request):
     if request.method == "POST":
         new_form = ExpertForm(request.POST)
-        import pdb; pdb.set_trace()
         if new_form.is_valid():
             new_form.save()
             # get the expert object from new form
@@ -136,7 +135,6 @@ def vocation_request_form_view(request):
 
             subject = f"تم استلام طلبك بنجاح"
             context = {}
-            import pdb; pdb.set_trace()
             email_body = render_to_string("component/vocation_email_for_user.html", context)
             email = EmailMessage(subject, email_body, from_email, [to_email])
             email.content_subtype = "html"
