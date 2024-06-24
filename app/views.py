@@ -85,8 +85,8 @@ def join_as_expert_form_view(request):
             email.send()
 
             subject = f"تم استلام طلبك بنجاح"
-            context["admin_page_url"] = request.build_absolute_uri(reverse("home"))
-            email_body = render_to_string("component/join_email.html", context)
+            context = {}
+            email_body = render_to_string("component/join_email_for_user.html", context)
             email = EmailMessage(subject, email_body, from_email, [to_email])
             email.content_subtype = "html"
             email.send()
@@ -135,9 +135,9 @@ def vocation_request_form_view(request):
             email.send()
 
             subject = f"تم استلام طلبك بنجاح"
-            context["admin_page_url"] = request.build_absolute_uri(reverse("home"))
+            context = {}
             import pdb; pdb.set_trace()
-            email_body = render_to_string("component/vocation_email.html", context)
+            email_body = render_to_string("component/vocation_email_for_user.html", context)
             email = EmailMessage(subject, email_body, from_email, [to_email])
             email.content_subtype = "html"
             email.send()
@@ -183,8 +183,8 @@ def vocation_request_form_from_home_view(request):
             email.send()
 
             subject = f"تم استلام طلبك بنجاح"
-            context["admin_page_url"] = request.build_absolute_uri(reverse("home"))
-            email_body = render_to_string("component/vocation_email.html", context)
+            context = {}
+            email_body = render_to_string("component/vocation_email_for_user.html", context)
             email = EmailMessage(subject, email_body, from_email, [to_email])
             email.content_subtype = "html"
             email.send()
