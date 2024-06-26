@@ -33,7 +33,7 @@ DEBUG = config("DEBUG", cast=bool)
 ALLOWED_HOSTS = ["he.com.sa", "www.he.com.sa"]
 
 if DEBUG:
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
