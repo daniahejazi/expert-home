@@ -40,18 +40,10 @@ body {
   min-height: 100vh;
   background: #fafafa;
 }
-.cairo-<uniquifier > {
-  font-family: "Cairo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings: "slnt" 0;
-}
 :root {
   --main-color: #004637;
   --white-color: #fff;
   --main-sec-color: #f4fffb;
-  // --secondary-color:#F2DA45;
 
   --secondary-color: #04f280;
   --font-des-color: #494949;
@@ -115,18 +107,17 @@ header .dropdown-item {
 }
 /* start home hero*/
 .hero-sec {
-  background-image: url(../images/home/homehero.png);
+  background-image: url(../images/home/homehero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   /* height: 100%;*/
-  
 }
 
 @media (min-width: 979px) {
   .hero-sec {
 
-    height: 40rem !important;
+    height: 49rem !important;
   }
 }
 
@@ -135,17 +126,30 @@ header .dropdown-item {
   font-size: 30px;
   font-weight: 700;
   text-align: start;
-  width: 30%;
+  width: 50%;
   line-height: 37px;
 }
 .hero-sec .hero-paragraph {
   color: var(--white-color);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 300;
   text-align: start;
-  width: 35%;
-  line-height: 34px;
+  width: 90%;
+  line-height: 40px;
   padding: 15px 0px;
+}
+
+@media (max-width: 767px) {
+  .hero-sec .hero-title {
+    font-size: 20px;
+    width: 100%;
+  }
+  .hero-sec .hero-paragraph {
+    font-size: 20px;
+    width: 90%;
+    line-height: 30px;
+  }
+
 }
 .hero-sec .contact-us-btn {
   background: var(--main-sec-color);
@@ -178,7 +182,7 @@ header .dropdown-item {
 
 @media (min-width: 992px) {
   .hero-sec-content {
-    margin-top: 10rem;
+    margin-top: 16rem;
   }
 }
 .category-sec .category-cards {
@@ -201,29 +205,42 @@ header .dropdown-item {
 /*start executive-sec */
 .executive-sec .executive-sec-description {
   color: var(--font-des-color);
-  font-size: 18px;
-  line-height: 36px;
+  font-size: 1.5em;
+  line-height: 40px;
   text-align: start;
-  width: 80%;
+  width: 100%;
+  margin: 20px 0px;
 }
 .executive-sec .executive-sec-description span {
   color: var(--main-color);
   font-weight: 700;
 }
 .executive-sec .executive-sec-image {
-  width: 340px;
-  height: 474px;
+  width: 50%;
+  height: 75%;
   margin: 0 auto;
 }
+
+
 .custom-container .section-title {
   color: var(--main-color);
-  font-size: 18px;
+  font-size: 2.5rem;
   font-weight: 600;
 }
+
+
+@media (max-width: 767px) {
+  .custom-container .section-title {
+    font-size: 30px;
+  }
+
+}
+
+
 /*home-executive*/
 .home-executive .card {
   border: 1px solid #f4fffb;
-  box-shadow: 0px 0px 9px #0b724c78;
+  box-shadow: 0px 0px 9px #00000078;
   width: 90%;
   margin: 0 auto;
   border-radius: 14px;
@@ -255,8 +272,8 @@ header .dropdown-item {
   transition-timing-function: linear !important;
 }
 .Experience-sec .swiper-slide {
-  // width: 200px;
-  // height: 200px;
+  /* // width: 200px;
+  // height: 200px; */
   text-align: center;
   font-size: 33px;
   display: flex;
@@ -331,18 +348,18 @@ swiper-slide {
   text-align: start;
   color: var(--main-color);
   font-weight: 600;
-  font-size: 18px;
+  font-size: 2.1rem;
   padding-bottom: 16px;
 }
 .services-sec .services-sec-description {
-  font-size: 16px;
+  font-size: 1.5rem;
   color: var(--font-des-color);
   text-align: start;
   line-height: 31px;
-  width: 70%;
+  width: 90%;
 }
 .services-sec .services-sec-description span {
-  color: var(--span-color);
+  color: var(--secondary-color);
   font-weight: 700;
 }
 /*start Specialties-sec*/
@@ -728,7 +745,7 @@ swiper-slide {
   text-align: start;
 }
 .join-as-officer .label-form-sec span {
-  color: var(--span-color);
+  color: var(--secondary-color);
 }
 .join-as-officer .form-sec {
   border: 1px solid rgb(244, 255, 251);
