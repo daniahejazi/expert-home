@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Almarai';
+    src: url(../fonts/Almarai-Regular.ttf);
+}
+
+reset
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td {
+	margin: 0;
+	padding: 0;
+	direction: rtl;
+}
+html{
+    height: 100%;
+}
+body {
+    font-family: 'Almarai';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+:root{
+    --navbg-color:#EDEDED;
+    --navbg-shadow-color:#cfcfcf;
+    --link-color-active:#882929;
+    --link-color:#555;
+    --link-color-title:#444;
+    --link-color-paragraph:#999;
+    --link-color-rate:#DEA000;
+    --footer-description:#848484;
+    --action-media:#888;
+}
+/* start footer */
+.footer{
+    background-image: url(../images/footer/footerbg.png);
+    height: 297px;
+    background-repeat: no-repeat;
+    margin-top: auto;
+}
+.footer .footer-logo {
+    width: 184px;
+    height: 52px;
+}
+.footer .footer-row{
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.footer .footer-span{
+    display: grid;
+}
+.footer .footer-description{
+    color: var(--footer-description);
+    font-size: 1.2rem;
+    padding: 10px 0px;
+}
+.footer .footer-links{
+    gap: 140px;
+}
+.footer .footer-links h5{
+    color: var(--link-color-active);
+    padding: 10px 0px 15px;
+    font-size: 1.6rem;
+}
+.footer .footer-links ul li .link-footer{
+color: var(--link-color);
+text-decoration: none;
+font-size: 1.3rem;
+}
+.footer .social-footer{
+    gap: 0.8rem;
+}
+@media (max-width:991px){
+    .footer{
+        background-color: white;
+        background-image: unset;
+        height: fit-content;
+    }  
+}
+
+/* end footer */

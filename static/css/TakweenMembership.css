@@ -1,0 +1,306 @@
+@font-face {
+    font-family: 'Almarai';
+    src: url(../fonts/Almarai-Regular.ttf);
+}
+
+reset
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td {
+	margin: 0;
+	padding: 0;
+	direction: rtl;
+}
+html{
+    height: 100%;
+}
+body {
+    font-family: 'Almarai';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #F4F4F4;
+}
+:root{
+    --navbg-color:#EDEDED;
+    --navbg-shadow-color:#cfcfcf;
+    --link-color-active:#882929;
+    --link-color:#555;
+    --link-color-title:#444;
+    --link-color-paragraph:#999;
+    --link-color-rate:#DEA000;
+    --footer-description:#848484;
+    --action-media:#888;
+    --search-btn-border:rgba(213, 213, 213, 0.01);
+    --search-background:#FFFFFF;
+    --search-color:#9D9D9D;
+    --slider-color:#fff;
+    --sections-description-color:#535353;
+    --sections-title-color:#000;
+    --input-color:#B1B1B1;
+    --input-border:#B7B7B7;
+}
+/* start Membership */
+.Membership{
+    background: #EDEDED;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.Membership .membership-title{
+    font-weight: 700;
+    font-size: 30px;
+    padding: 15px 0px;
+    color: var(--sections-title-color);
+}
+.Membership .paragraph-membership{
+    font-size: 18px;
+    padding: 10px 20px;
+    line-height: 32px;
+    color: var(--link-color-title);
+}
+/*  */
+.multi-button {
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 12px;
+  }
+  .multi-button button {
+    height: 40px;
+    width: 50px;
+    border: none;
+    background-color: inherit;
+  }
+  .multi-button button:hover {
+    background-color: #ddd;
+  }
+  .multi-button button:first-child {
+    border-radius: 8px 0 0 8px;
+  }
+  .multi-button button:last-child {
+    border-radius: 0 8px 8px 0;
+  }
+  /*  */
+  /* switch btn */
+  .switch-button {
+    background: rgb(219 219 219);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 240px;
+    text-align: center;
+    font-size: 18px;
+    /* letter-spacing: 1px; */
+    color: var(--link-color-title); 
+
+    font-weight: 600;
+    position: relative;
+    padding-right: 120px;
+    position: relative;
+    margin: 0 auto;
+    height: 57px;
+  }
+  .switch-button-checkbox:checked + .switch-button:before,
+  .switch-button-checkbox:checked + .switch-button-label:before  {
+    color: white;
+  }
+  .switch-button-label::after {
+    content: "شهري";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* right: 0; */
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+    color: var(--link-color-title);
+    left: 122px;
+  }
+  input[type=checkbox]:checked +  .switch-button-label::after{
+    color: white;
+  }
+  input[type=checkbox]:checked +  .switch-button-label .switch-button-label-span{
+    color:var(--link-color-title);
+  }
+  .switch-button-checkbox + .switch-button-label .switch-button-label-span{
+    color: white;
+  }
+  .switch-button-checkbox {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+}
+.switch-button-checkbox:checked + .switch-button-label:before {
+    transform: translateX(120px);
+    transition: transform 300ms linear;
+}
+.switch-button-checkbox:checked + .switch-button:before{
+    color: white;
+}
+.switch-button-label{
+    color: var(--link-color-title);
+}
+.switch-button-checkbox + .switch-button-label {
+    position: relative;
+    padding: 15px 0;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+    /* color: white; */
+}
+.switch-button-checkbox + .switch-button-label:before {
+    content: "";
+    background: var(--link-color-active);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+    transform: translateX(0);
+    transition: transform 300ms;
+}
+.switch-button-checkbox + .switch-button-label .switch-button-label-span {
+    position: relative;
+    
+}
+.switch-button-checkbox:checked + .switch-button:before + .switch-button-checkbox:checked {
+    color: white;
+}
+.switch-button-checkbox:checked~.switch-button-label-span{
+    color: white;
+}
+/* .month-div{
+    display: none;
+} */
+/* .month-div{
+    display: none;
+}
+.switch-button-checkbox:checked ~ .month-div{
+    display: block ;
+} */
+
+/* .switch-button-checkbox:checked ~ .switch-button-label ~ .month-div{
+display: block;
+} */
+  /* end */ 
+  /* start PackagePlan */
+.PackagePlan  .package{
+    background: #f4f4f4;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    min-height: 440px;
+    height: 100%;
+}
+.package-title{
+    font-size: 23px;
+    font-weight: 600;
+    padding: 10px 0px 20px;
+}
+.list-package{
+    list-style: none;
+    text-align: right;
+    padding: 0px 10px;
+  }
+  .li-div{
+    display: flex;
+    gap: 10px;
+  }
+  .li-div .done-icon{
+    width: 24px;
+    height: 24px;
+    margin-top: 14px;
+  }
+.package-details{
+    font-size: 16px;
+    color: #555;
+}
+.price{
+    position: absolute;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    left: 6rem;
+    bottom: 0;
+}
+.prev-price{
+    font-size: 20px;
+    color: #222121;
+}
+.new-price{
+    font-size: 20px;
+    font-weight: 600;
+    color: #222121;
+}
+.PackagePlan  .package:hover,
+.PackagePlan  .package:focus{
+    background-color: #882929;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.PackagePlan .active {
+    background-color: #882929;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.PackagePlan  .active,
+.PackagePlan  .active .package-details,
+.PackagePlan  .active .prev-price,
+.PackagePlan  .active .new-price,
+.PackagePlan  .package:hover .package-title,
+.PackagePlan  .package:focus .package-title,
+.PackagePlan  .package:hover .package-details,
+.PackagePlan  .package:focus .package-details,
+.PackagePlan  .package:hover .prev-price,
+.PackagePlan  .package:focus .prev-price,
+.PackagePlan  .package:hover .new-price,
+.PackagePlan  .package:focus .new-price{
+    color: white;
+}
+.done-icon{
+    color: #882929;
+    margin-top: 17px;
+}
+.PackagePlan  .package:hover .done-icon,
+.PackagePlan  .package:focus .done-icon,
+.active .done-icon{
+    color: white;
+}
+  /* end PackagePlan */
+  /* start next btn */
+.next-btn-div .next-btn{
+    width: 300px;
+    height: 57px;
+    background: #f4f4f4;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: 0px;
+    color: var(--link-color-title);
+    font-size: 23px;
+    transition: all 0.3s ease-in-out;
+}
+.next-btn-div .next-btn:focus,
+.next-btn-div .next-btn:hover{
+    background: var(--link-color-active);
+    color: var(--search-background);
+    transition: all 0.3s ease-in-out;
+}
+/*  */
+@media (min-width:320px) and (max-width:480px) {
+    .next-btn-div .next-btn {
+        width: 190px;
+    }
+}
+@media (min-width:320px) and (max-width:800px) {
+    .price {
+        position: unset;
+    }
+}
+/*  */

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<!-- start work bg sec -->
+<div class="workbg-sec">
+  {% if messages %}
+  <div class="custom-alert">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show custom-alert-content" role="alert">
+      <p>{{ message }}</p>
+      <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="container-fluid p-0">
+    <img src="{% static 'images/home/requestbg.png' %}" alt="image" itemprop="image" class="workbg-image" />
+  </div>
+</div>
+<!-- end work bg sec -->
+<!-- start contact us -->
+<div class="contact-us-sec bg-white py-3">
+
+  <div class="container-fluid custom-container">
+    <div class="d-flex justify-content-start align-items-center " style="padding: 20px 0px;gap: 10px;">
+      <img src="{% static 'images/home/arrow.svg' %}" itemprop="image" alt="icon" style="width: 24px;height: 24px;" />
+      <h4 class="section-title" itemprop="title">
+        نحن معك دائما
+      </h4>
+    </div>
+    <div class="row"
+      style="border: 1px solid rgb(244, 255, 251);box-shadow: rgba(11, 114, 76, 0.47) 0px 0px 9px;border-radius: 10px; background: white; margin: 1rem auto;">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-3 py-4 text-center">
+        <h5 itemprop="title-contact" class="contact-title-sec">
+          طلب استشارة
+        </h5>
+        <p itemprop="des-contact" class="des-title-sec">
+          شكراً على اهتمامك بـ"<span>بيت الخبراء الموحد</span>"! تواصل معنا
+          وشاركنا أسئلتك واقتراحاتك وأفكارك، فتواصلك يسرّنا دوماً
+        </p>
+        <form method="post" action="{% url 'consultation_form' %}" class="form-sec pt-4">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-6">
+              <input type="text" name="first_name" class="input-contact form-control" placeholder="الاسم الاول"
+                required />
+            </div>
+            <div class="col-6">
+              <input type="text" name="last_name" class="input-contact form-control" placeholder="الاسم الاخير"
+                required />
+            </div>
+          </div>
+          <div>
+            <input type="email" name="email" placeholder="البريد الالكتروني" required class="input-contact form-control"
+              style="margin-bottom: 17px !important;" />
+            <input type="text" name="phone" placeholder=" رقم الهاتف" required class="input-contact form-control"
+              style="margin-bottom: 17px !important;" />
+            <textarea type="email" name="message" placeholder=" تفاصيل الاستشارة" required
+              class="textarea-contact form-control" style="margin-bottom: 17px !important;"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" onclick="" class="submit-btn">ارسال</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p-0">
+        <img src="{% static 'images/home/contact.png' %}" alt="image" itemprop="image" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end contact us -->
+
+{% endblock content %}
+
+{% block script %}
+<script>
+
+  $(document).ready(function () {
+    setTimeout(function () {
+      $(".alert").alert('close');
+    }, 3000); // 3 seconds
+  });
+
+</script>
+{% endblock script %}

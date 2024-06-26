@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+
+body {
+    font-family: "Tajawal", "Helvetica Neue", "Helvetica";
+    direction: rtl;
+    color: white;
+}
+
+.my-navbar {
+    background-color: #004637;
+    color: white;
+
+    position: fixed;
+    z-index: 111;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+
+.my-navbar button span {
+    color: white !important;
+}
+
+.my-navbar a {
+    color: #CCC;
+}
+
+.my-navbar .navbar-brand{
+    color: white;
+}
+
+.my-navbar a:visited {
+    color:  white;
+}
+
+.my-navbar a:hover {
+    color: white;
+}
+
+.main-content {
+
+
+}
+
+
+.hero {
+    background-image: url("../img/hero-bg.jpg");
+    background-color: #1a8f75;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin-top: 55px;
+    padding: 0.5rem 1rem;
+}
+
+.hero h1 {
+    margin-top: 0;
+}
